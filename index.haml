@@ -1,0 +1,66 @@
+!!! 5
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %title Webmil
+    %link{'rel' => 'stylesheet', 'href' => 'stylesheets/screen.css', 'media' => 'screen, projection'}
+    %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
+  %body
+    .container
+      %header
+        #menu
+          %nav
+            %ul.menu
+              %li#home
+                %a{:href => "#"} Home
+              %li#work
+                %a{:href => "#"} Work
+              %li
+                %a{:href => "#"} Team
+              %li
+                %a{:href => "#"} Contact
+      .content
+        
+      .footer-push
+    %footer
+      .footer-container
+        %nav.sitemap
+          %h4 Sitemap
+          %ul
+            %li
+              %a{:href => "#"} home
+            %li
+              %a{:href => "#"} work
+            %li
+              %a{:href => "#"} team
+            %li
+              %a{:href => "#"} contact
+        %nav.resources
+          %h4 Resources
+          %ul
+            %li
+              %a{:href => "#"} facebook
+            %li
+              %a{:href => "#"} twitter
+            %li
+              %a{:href => "#"} RSS feed
+            %li
+              %a{:href => "#"} tumblr
+        .tweet
+          %h4 What we're into right now
+          %p 
+            The @namename site we've been working on for @namename1 has won redesign of the year at the UK eCommerce awards. Back slaps all round!
+            %span
+          %span @webmillab
+        .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
+          %h4 Get in touch with us
+          %meta{itemprop: "name", content: "Webmil"}
+          %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+            .tel{itemprop: "telephone"} +38 (0342) 735 448
+            .mail{itemprop: "email"} info@webmil.com.ua
+            .locality{itemprop: "addressLocality"} Україна, Івано-Франківськ,
+            .street{itemprop: "streetAddress"} вул. Української Дивізії, 5а
+          %a{href: "#"} Map & directions
+        .social
+          %a{:href => "#"}
+            %img{:src  => "images/face.png"}

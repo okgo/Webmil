@@ -1,0 +1,128 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "compass/reset";
+
+// To configure blueprint, edit the partials/_base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint/grid";
+
+// Generate the blueprint framework according to your configuration:
+
+@import "compass/layout/sticky-footer";
+
+@include sticky-footer(255px, ".container", ".footer-push", "footer");
+
+$icons: sprite-map("sprites/*.png");
+$base-color: #2daebf;
+body{
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size:14px;
+    letter-spacing:normal;
+}
+.container{
+    background-image: url('../images/background.png');
+}
+.content {
+  @include container;
+  color: #404040;  
+}
+header{
+    background: url('../images/menu_back.png') repeat-x;
+    background-position: bottom;
+    height: 115px;
+    position: fixed;
+    width: 100%;
+    #menu{
+      @include container;
+      ul.menu{
+        @include column(8);
+        @include prepend(14);
+        margin-top: 80px;
+        li{
+            display: inline-block;
+            margin: 0 15px;
+            a{
+              color: #4c4d4f;
+              text-decoration: none;
+              font-size: 17px;
+             &:hover{
+		   color: $base-color;
+	       }
+            }
+        }
+      }
+    }
+}
+footer{
+    background:#4f4f4f;
+    .footer-container{
+	@include container;
+	color:#fff;
+	line-height:24px;
+	padding-top:40px;
+	h4{
+	    color:#979797;
+	}
+	ul{
+	    margin-top:35px;
+	    li{
+	       a{
+		 color: #fff;
+		 text-decoration: none;
+	       &:hover{
+		   color: $base-color;
+	       }
+	       }
+	    }
+	}
+	.sitemap{
+	    @include column(2);
+	    @include prepend(2);
+	}
+	.resources{
+	    @include column(2);
+	}
+	.tweet{
+	    @include column(8);
+	    @include prepend(1);
+	    p{
+		background-color: #2daebf;
+		margin-top: 27px;
+		padding: 8px;
+		position:relative;
+		span{
+		    display:block;
+		    width:23px;
+		    height:24px;
+		    position:absolute;
+		    bottom:0;
+		    right:0;
+		    background: sprite($icons, bracket) no-repeat;
+		}
+	    }
+	    span{
+		float:right;
+	    }
+	}
+	.address{
+	    @include column(5);
+	    @include prepend(1);
+	    h4{
+		text-decoration: underline;
+	    }
+	    address{
+		margin-top:35px;
+	    }
+            a{
+                color: #2daebf;
+            }
+	}
+	.social{
+	    @include column(3, true);
+            a{
+                float: right;
+            }
+	}
+    }
+}
