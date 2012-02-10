@@ -22,37 +22,137 @@ body{
 }
 .container{
     background-image: url('../images/background.png');
+    position: relative;
+}
+.header{
+      background: url('../images/menu_back.png') repeat-x;
+      background-position: bottom;
+      height: 115px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+  
+      header{
+        background: url('../images/background.png');
+        height: 103px;
+        width: 100%;
+        #menu{
+          @include container;
+          ul.menu{
+            @include column(8, true);
+            @include prepend(14);
+            margin-top: 80px;
+            li{
+                display: inline-block;
+                margin: 0 15px;
+                a{
+                  color: #4c4d4f;
+                  text-decoration: none;
+                  font-size: 17px;
+                &:hover{
+		  color: $base-color;
+	        }
+                }
+            }
+          }
+          .logo{
+            @include column(2, true);
+            margin-top: 22px;
+          }
+        }
+      }
 }
 .content {
   @include container;
-  color: #404040;  
-}
-header{
-    background: url('../images/menu_back.png') repeat-x;
-    background-position: bottom;
-    height: 115px;
-    position: fixed;
-    width: 100%;
-    #menu{
-      @include container;
-      ul.menu{
-        @include column(8);
-        @include prepend(14);
-        margin-top: 80px;
-        li{
-            display: inline-block;
-            margin: 0 15px;
-            a{
-              color: #4c4d4f;
-              text-decoration: none;
-              font-size: 17px;
-             &:hover{
-		   color: $base-color;
-	       }
+  color: #404040;
+  margin-bottom: 20px;
+  padding-top: 115px;
+  font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+  .left-address{
+    @include column(5);
+    .address{
+        h2{
+           font-size: 30px;
+           color: $base-color;
+           margin-top: 35px;
+        }
+        address{
+            margin-top: 20px;
+            font-size: 14px;
+            .skype{
+                p{
+                  span{
+                    color: $base-color;
+                  }
+                }
+            }
+            .mail{
+                p{
+                  span{
+                    color: $base-color;
+                    text-decoration: underline;
+                  }
+                }
             }
         }
-      }
     }
+  }
+  .right-address{
+    @include column(18, true);
+    @include prepend(1);
+    h2{
+        font-size: 30px;
+        color: $base-color;
+        margin-top: 35px;
+    }
+    #map{
+      display: block;
+      margin-top: 20px;
+      height: 300px;
+      border: 10px solid #fff;
+      width: 690px;
+    }
+  }
+  .form-txt{
+    @include column(6);
+    margin-top: 40px;
+    h2{
+        font-size: 30px;
+        color: $base-color;
+    }
+    p{
+        color: #acacac;
+        margin-top: 20px;
+        width: 185px;
+    }
+  }
+  form{
+    @include column(16, true);
+    margin-top: 40px;
+    .form{
+        font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+        p{
+            margin-top: 10px;
+            margin-bottom: 3px;
+        }
+        input{
+            width: 470px;
+            height: 30px;
+            color: #4c4d4f;
+            font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+            text-indent: 15px;
+            border-radius: 5px;
+            border: 1px solid #e1e1e1;
+            &:hover{
+		border: 1px solid $base-color;
+	    }
+        }
+        textarea{
+            width: 470px;
+        }
+    }
+  }
 }
 footer{
     background:#4f4f4f;

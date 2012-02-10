@@ -1,0 +1,134 @@
+!!! 5
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %title Webmil
+    %link{'rel' => 'stylesheet', 'href' => 'stylesheets/screen.css', 'media' => 'screen, projection'}
+    %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
+    %script{'type' => 'text/javascript', 'src' => 'http://maps.googleapis.com/maps/api/js?sensor=false'}
+  %body
+    .header
+      %header
+        #menu
+          %nav
+            %ul.menu
+              %li#home
+                %a{:href => "#"} Home
+              %li#work
+                %a{:href => "#"} Work
+              %li#team
+                %a{:href => "#"} Team
+              %li#contact
+                %a{:href => "contact.html"} Contact
+          .logo
+            %a{href: "index.html"}
+              %img{src: "images/logo.png"}
+    .container
+      .content
+        .left-address
+          .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
+            %h2 Adress:
+            %meta{itemprop: "name", content: "Webmil"}
+            %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+              .locality{itemprop: "addressLocality"}
+                %p 76000 Україна
+                %p м.Івано-Франківськ                                  
+              .street{itemprop: "streetAddress"}
+                %p вул. Січових Стрільців, 30
+            %h2 Phone:
+            %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+              .tel{itemprop: "telephone"}
+                %p +38 0342 735 448
+                %p +38 094 922 8448
+                %p +38 063 757 0020
+            %h2 On-line:
+            %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+              .skype{itemprop: "skype"}
+                %p
+                  skype:
+                  %span butlerok
+              .mail{itemprop: "email"}
+                %p
+                  e-mail:
+                  %span info@webmil.com.ua
+        .right-address
+          %h2 How to get
+          #map
+        .form-txt
+          %h2 Contact Us
+          %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        %form
+          .form
+            %p Name
+            %input{:type=> "text"}
+            %p Subject
+            %input{:type=> "text"}
+            %p E-mail
+            %input{:type=> "text"}
+            %p Message
+            %textarea
+      .footer-push
+    %footer
+      .footer-container
+        %nav.sitemap
+          %h4 Sitemap
+          %ul
+            %li
+              %a{:href => "#"} home
+            %li
+              %a{:href => "#"} work
+            %li
+              %a{:href => "#"} team
+            %li
+              %a{:href => "#"} contact
+        %nav.resources
+          %h4 Resources
+          %ul
+            %li
+              %a{:href => "#"} facebook
+            %li
+              %a{:href => "#"} twitter
+            %li
+              %a{:href => "#"} RSS feed
+            %li
+              %a{:href => "#"} tumblr
+        .tweet
+          %h4 What we're into right now
+          %p 
+            The @namename site we've been working on for @namename1 has won redesign of the year at the UK eCommerce awards. Back slaps all round!
+            %span
+          %span @webmillab
+        .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
+          %h4 Get in touch with us
+          %meta{itemprop: "name", content: "Webmil"}
+          %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+            .tel{itemprop: "telephone"} +38 (0342) 735 448
+            .mail{itemprop: "email"} info@webmil.com.ua
+            .locality{itemprop: "addressLocality"} Україна, Івано-Франківськ,
+            .street{itemprop: "streetAddress"} вул. Української Дивізії, 5а
+          %a{href: "#"} Map & directions
+        .social
+          %a{:href => "#"}
+            %img{:src  => "images/face.png"}
+    %script{'type'=> 'text/javascript'}
+      :plain
+            //google map
+            var init = function(){
+                var myOptions = {
+                    zoom: 15,
+                    streetViewControl: false ,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP};
+                var map = new google.maps.Map(document.getElementById("map"), myOptions);
+                var geocoder = new google.maps.Geocoder();
+                geocoder.geocode( { 'address': 'Івано-Франківськ, Січових Стрільців 30'}, function(results, status){
+                    if (status == google.maps.GeocoderStatus.OK){
+                        map.setCenter(results[0].geometry.location);
+                        var conf ={
+                            map: map,
+                            icon: 'images/logo.png',
+                            position: results[0].geometry.location};
+                        var marker = new google.maps.Marker(conf);
+                    }
+                })
+            };
+            google.maps.event.addDomListener(window, 'load', init());

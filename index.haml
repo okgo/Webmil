@@ -5,8 +5,7 @@
     %title Webmil
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/screen.css', 'media' => 'screen, projection'}
     %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
-  %body
-    .container
+    .header
       %header
         #menu
           %nav
@@ -15,12 +14,15 @@
                 %a{:href => "#"} Home
               %li#work
                 %a{:href => "#"} Work
-              %li
+              %li#team
                 %a{:href => "#"} Team
-              %li
-                %a{:href => "#"} Contact
+              %li#contact
+                %a{:href => "contact.html"} Contact
+          .logo
+            %a{href: "index.html"}
+              %img{src: "images/logo.png"}
+    .container
       .content
-        
       .footer-push
     %footer
       .footer-container
