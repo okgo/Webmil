@@ -346,12 +346,65 @@ body {
   cursor: pointer;
   border: none;
 }
+/* line 202, ../sass/screen.scss */
+.content .work {
+  margin-top: 20px;
+}
+/* line 204, ../sass/screen.scss */
+.content .work .work-item, .content .work .work-item-last {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+  margin-top: 30px;
+}
+/* line 147, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .content .work .work-item, * html .content .work .work-item-last {
+  overflow-x: hidden;
+}
+/* line 208, ../sass/screen.scss */
+.content .work .work-item a img, .content .work .work-item-last a img {
+  width: 310px;
+  height: 200px;
+}
+/* line 213, ../sass/screen.scss */
+.content .work .work-item .name, .content .work .work-item-last .name {
+  font-size: 18px;
+  text-decoration: none;
+  color: #363636;
+  display: inline-block;
+  margin-top: 5px;
+}
+/* line 220, ../sass/screen.scss */
+.content .work .work-item .next, .content .work .work-item-last .next {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  float: right;
+  margin-top: 7px;
+  background: url("../images/next.png");
+}
+/* line 227, ../sass/screen.scss */
+.content .work .work-item .next:hover, .content .work .work-item-last .next:hover {
+  background: url("../images/next_h.png");
+}
+/* line 232, ../sass/screen.scss */
+.content .work .work-item-last {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 310px;
+}
+/* line 147, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .content .work .work-item-last {
+  overflow-x: hidden;
+}
 
-/* line 203, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 footer {
   background: #4f4f4f;
 }
-/* line 205, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 footer .footer-container {
   width: 950px;
   margin: 0 auto;
@@ -361,24 +414,24 @@ footer .footer-container {
   line-height: 24px;
   padding-top: 40px;
 }
-/* line 210, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 footer .footer-container h4 {
   color: #979797;
 }
-/* line 213, ../sass/screen.scss */
+/* line 247, ../sass/screen.scss */
 footer .footer-container ul {
   margin-top: 35px;
 }
-/* line 216, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 footer .footer-container ul li a {
   color: #fff;
   text-decoration: none;
 }
-/* line 219, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 footer .footer-container ul li a:hover {
   color: #2daebf;
 }
-/* line 225, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 footer .footer-container .sitemap {
   display: inline;
   float: left;
@@ -390,7 +443,7 @@ footer .footer-container .sitemap {
 * html footer .footer-container .sitemap {
   overflow-x: hidden;
 }
-/* line 229, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 footer .footer-container .resources {
   display: inline;
   float: left;
@@ -401,7 +454,7 @@ footer .footer-container .resources {
 * html footer .footer-container .resources {
   overflow-x: hidden;
 }
-/* line 232, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 footer .footer-container .tweet {
   display: inline;
   float: left;
@@ -413,14 +466,14 @@ footer .footer-container .tweet {
 * html footer .footer-container .tweet {
   overflow-x: hidden;
 }
-/* line 235, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 footer .footer-container .tweet p {
   background-color: #2daebf;
   margin-top: 27px;
   padding: 8px;
   position: relative;
 }
-/* line 240, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 footer .footer-container .tweet p span {
   display: block;
   width: 23px;
@@ -430,11 +483,11 @@ footer .footer-container .tweet p span {
   right: 0;
   background: url('../images/sprites-s1a50462d33.png') 0 0 no-repeat;
 }
-/* line 250, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 footer .footer-container .tweet span {
   float: right;
 }
-/* line 254, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 footer .footer-container .address {
   display: inline;
   float: left;
@@ -446,19 +499,19 @@ footer .footer-container .address {
 * html footer .footer-container .address {
   overflow-x: hidden;
 }
-/* line 257, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 footer .footer-container .address h4 {
   text-decoration: underline;
 }
-/* line 260, ../sass/screen.scss */
+/* line 294, ../sass/screen.scss */
 footer .footer-container .address address {
   margin-top: 35px;
 }
-/* line 263, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 footer .footer-container .address a {
   color: #2daebf;
 }
-/* line 267, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 footer .footer-container .social {
   display: inline;
   float: left;
@@ -469,7 +522,7 @@ footer .footer-container .social {
 * html footer .footer-container .social {
   overflow-x: hidden;
 }
-/* line 269, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 footer .footer-container .social a {
   float: right;
 }

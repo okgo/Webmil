@@ -199,6 +199,40 @@ body{
         }
     }
   }
+  .work{
+    margin-top: 20px;
+    .work-item, .work-item-last{
+        @include column(8);
+        margin-top: 30px;
+        a{
+            img{
+                width: 310px;
+                height: 200px;
+            }
+        }
+        .name{
+            font-size: 18px;
+            text-decoration: none;
+            color: #363636;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .next{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            float: right;
+            margin-top: 7px;
+            background: url('../images/next.png');
+            &:hover{
+		background: url('../images/next_h.png');
+	    }
+        }
+    }
+    .work-item-last{
+        @include column(8, true);
+    }
+  }
 }
 footer{
     background:#4f4f4f;

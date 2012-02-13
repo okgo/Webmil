@@ -11,11 +11,11 @@
           %nav
             %ul.menu
               %li#home
-                %a{:href => "#"} Home
+                %a{:href => "index.html"} Home
               %li#work
-                %a{:href => "#"} Work
+                %a{:href => "work.html"} Work
               %li#team
-                %a{:href => "#"} Team
+                %a{:href => "team.html"} Team
               %li#contact
                 %a{:href => "contact.html"} Contact
           .logo
@@ -23,6 +23,22 @@
               %img{src: "images/logo.png"}
     .container
       .content
+        .work
+          .work-item
+            %a{href: "#"}
+              %img{src: "images/work1.png", alt: "Work"}
+            %a.name{href: "#"} Західні Енергетичні Транзити
+            %a.next{href: "#"}
+          .work-item
+            %a{href: "#"}
+              %img{src: "images/work2.png", alt: "Work"}
+            %a.name{href: "#"} Expono
+            %a.next{href: "#"}
+          .work-item-last
+            %a{href: "#"}
+              %img{src: "images/work3.png", alt: "Work"}
+            %a.name{href: "#"} Електрополюс-ІФ
+            %a.next{href: "#"}
       
       .footer-push
     %footer
