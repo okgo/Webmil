@@ -13,7 +13,7 @@
           %nav
             %ul.menu
               %li#home
-                %a{:href => "#"} Home
+                %a{:href => "index.html"} Home
               %li#work
                 %a{:href => "#"} Work
               %li#team
@@ -22,7 +22,7 @@
                 %a{:href => "contact.html"} Contact
           .logo
             %a{href: "index.html"}
-              %img{src: "images/logo.png"}
+              %img{src: "images/logo.png", alt: "Logo"}
     .container
       .content
         .left-address
@@ -60,13 +60,15 @@
         %form
           .form
             %p Name
-            %input{:type=> "text"}
+            %input.error{:type=> "text"}
+            %span Please enter your Name
             %p Subject
             %input{:type=> "text"}
             %p E-mail
             %input{:type=> "text"}
             %p Message
             %textarea
+            %input.send-button{type: "submit", value: "Send"}
       .footer-push
     %footer
       .footer-container

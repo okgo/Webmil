@@ -164,8 +164,13 @@ body {
 * html .header header #menu .logo {
   overflow-x: hidden;
 }
+/* line 63, ../sass/screen.scss */
+.header header #menu .logo a img {
+  width: 75px;
+  height: 73px;
+}
 
-/* line 66, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .content {
   width: 950px;
   margin: 0 auto;
@@ -176,7 +181,7 @@ body {
   padding-top: 115px;
   font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
 }
-/* line 72, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .content .left-address {
   display: inline;
   float: left;
@@ -187,27 +192,27 @@ body {
 * html .content .left-address {
   overflow-x: hidden;
 }
-/* line 75, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 .content .left-address .address h2 {
   font-size: 30px;
   color: #2daebf;
   margin-top: 35px;
 }
-/* line 80, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .content .left-address .address address {
   margin-top: 20px;
   font-size: 14px;
 }
-/* line 85, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .content .left-address .address address .skype p span {
   color: #2daebf;
 }
-/* line 92, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .content .left-address .address address .mail p span {
   color: #2daebf;
   text-decoration: underline;
 }
-/* line 101, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .content .right-address {
   display: inline;
   float: left;
@@ -219,13 +224,13 @@ body {
 * html .content .right-address {
   overflow-x: hidden;
 }
-/* line 104, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .content .right-address h2 {
   font-size: 30px;
   color: #2daebf;
   margin-top: 35px;
 }
-/* line 109, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .content .right-address #map {
   display: block;
   margin-top: 20px;
@@ -233,7 +238,7 @@ body {
   border: 10px solid #fff;
   width: 690px;
 }
-/* line 117, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .content .form-txt {
   display: inline;
   float: left;
@@ -245,39 +250,48 @@ body {
 * html .content .form-txt {
   overflow-x: hidden;
 }
-/* line 120, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .content .form-txt h2 {
   font-size: 30px;
   color: #2daebf;
 }
-/* line 124, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .content .form-txt p {
   color: #acacac;
   margin-top: 20px;
   width: 185px;
 }
-/* line 130, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .content form {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 630px;
+  width: 710px;
   margin-top: 40px;
 }
 /* line 147, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .content form {
   overflow-x: hidden;
 }
-/* line 133, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .content form .form {
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  margin-top: 15px;
 }
-/* line 135, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 .content form .form p {
   margin-top: 10px;
   margin-bottom: 3px;
 }
-/* line 139, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
+.content form .form input.error {
+  border: 1px solid #eb7272;
+}
+/* line 148, ../sass/screen.scss */
+.content form .form input.error:hover {
+  border: 1px solid #eb7272;
+}
+/* line 152, ../sass/screen.scss */
 .content form .form input {
   width: 470px;
   height: 30px;
@@ -286,21 +300,58 @@ body {
   text-indent: 15px;
   border-radius: 5px;
   border: 1px solid #e1e1e1;
+  font-size: 14px;
 }
-/* line 147, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .content form .form input:hover {
   border: 1px solid #2daebf;
 }
-/* line 151, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 .content form .form textarea {
   width: 470px;
+  height: 195px;
+  color: #4c4d4f;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  text-indent: 15px;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+  padding-top: 10px;
+  font-size: 14px;
+}
+/* line 175, ../sass/screen.scss */
+.content form .form textarea:hover {
+  border: 1px solid #2daebf;
+}
+/* line 179, ../sass/screen.scss */
+.content form .form span {
+  margin-left: 15px;
+  color: #4c4d4f;
+}
+/* line 183, ../sass/screen.scss */
+.content form .form input.send-button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #2daebf;
+  font-size: 18px;
+  width: 45px;
+  text-align: center;
+  margin-left: 430px;
+  padding: 0;
+  display: block;
+  text-indent: 0;
+}
+/* line 195, ../sass/screen.scss */
+.content form .form input.send-button:hover {
+  cursor: pointer;
+  border: none;
 }
 
-/* line 157, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 footer {
   background: #4f4f4f;
 }
-/* line 159, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 footer .footer-container {
   width: 950px;
   margin: 0 auto;
@@ -310,24 +361,24 @@ footer .footer-container {
   line-height: 24px;
   padding-top: 40px;
 }
-/* line 164, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 footer .footer-container h4 {
   color: #979797;
 }
-/* line 167, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 footer .footer-container ul {
   margin-top: 35px;
 }
-/* line 170, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 footer .footer-container ul li a {
   color: #fff;
   text-decoration: none;
 }
-/* line 173, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 footer .footer-container ul li a:hover {
   color: #2daebf;
 }
-/* line 179, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 footer .footer-container .sitemap {
   display: inline;
   float: left;
@@ -339,7 +390,7 @@ footer .footer-container .sitemap {
 * html footer .footer-container .sitemap {
   overflow-x: hidden;
 }
-/* line 183, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 footer .footer-container .resources {
   display: inline;
   float: left;
@@ -350,7 +401,7 @@ footer .footer-container .resources {
 * html footer .footer-container .resources {
   overflow-x: hidden;
 }
-/* line 186, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 footer .footer-container .tweet {
   display: inline;
   float: left;
@@ -362,14 +413,14 @@ footer .footer-container .tweet {
 * html footer .footer-container .tweet {
   overflow-x: hidden;
 }
-/* line 189, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 footer .footer-container .tweet p {
   background-color: #2daebf;
   margin-top: 27px;
   padding: 8px;
   position: relative;
 }
-/* line 194, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 footer .footer-container .tweet p span {
   display: block;
   width: 23px;
@@ -379,11 +430,11 @@ footer .footer-container .tweet p span {
   right: 0;
   background: url('../images/sprites-s1a50462d33.png') 0 0 no-repeat;
 }
-/* line 204, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 footer .footer-container .tweet span {
   float: right;
 }
-/* line 208, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 footer .footer-container .address {
   display: inline;
   float: left;
@@ -395,19 +446,19 @@ footer .footer-container .address {
 * html footer .footer-container .address {
   overflow-x: hidden;
 }
-/* line 211, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 footer .footer-container .address h4 {
   text-decoration: underline;
 }
-/* line 214, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 footer .footer-container .address address {
   margin-top: 35px;
 }
-/* line 217, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 footer .footer-container .address a {
   color: #2daebf;
 }
-/* line 221, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 footer .footer-container .social {
   display: inline;
   float: left;
@@ -418,7 +469,7 @@ footer .footer-container .social {
 * html footer .footer-container .social {
   overflow-x: hidden;
 }
-/* line 223, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 footer .footer-container .social a {
   float: right;
 }
