@@ -228,9 +228,170 @@ body{
 		background: url('../images/next_h.png');
 	    }
         }
+        p.desc{
+            color: #979797;
+            border-top: 1px solid $base-color;
+            padding-top: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
     }
     .work-item-last{
         @include column(8, true);
+    }
+  }
+  .work-open-h{
+    h1{
+        font-size: 30px;
+        color: #4f4f4f;
+        font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+        margin-top: 30px;
+        margin-bottom: 5px;
+        a{
+            font-size: 14px;
+            color: $base-color;
+            float: right;
+            margin-top: 14px;
+            text-decoration: underline;
+        }
+    }
+    p{
+        a{
+            color: $base-color;
+            font-size: 14px;
+            font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+            text-decoration: underline;
+        }
+    }
+    p.desc{
+        @include column (20);
+        @include prepend(1);
+        color: #4f4f4f;
+        font-size: 12px;
+        line-height: 24px;
+        font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+        margin-top: 20px;
+    }
+    .ipad{
+        @include column (22);
+        @include prepend(1);
+        background:  url("../images/image.png") no-repeat center center;
+        margin-top: 45px;
+        height: 700px;
+        i.frame{
+            background: url("../images/ipad.png") no-repeat;
+            display: block;
+            height: 672px;
+            width: 862px;
+            border-radius: 50px;
+            box-shadow: 0px 10px 10px #b0b0b0;
+      }
+    }
+    .booklet{
+        @include column (24);
+        margin-top: 20px;
+        img{
+            width: 950px;
+            height: 700px;
+        }
+    }
+    .city-light{
+        @include column (12);
+        @include prepend(6);
+        margin-top: 20px;
+        background:  url("../images/image1.png") no-repeat;
+        background-position: 325px 30px;
+        i.frame{
+            background: url("../images/frame.png") no-repeat;
+            display: block;
+            height: 701px;
+            width: 531px;
+        }
+        
+    }
+  }
+  .work-open-v{
+    .ipad{
+        @include column (17);
+        background:  url("../images/image2.png") no-repeat;
+        background-position: 78px 86px;
+        margin-top: 45px;
+        i.frame{
+            background: url("../images/ipad1.png") no-repeat;
+            display: block;
+            height: 860px;
+            width: 673px;
+      }
+    }
+    .desc{
+         @include column(6, true);
+         @include prepend(1);
+         margin-top: 44px;
+         p{
+            text-align: right;
+            a{
+               color: $base-color;
+               font-size: 14px;
+               font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+            }
+         }
+         h1{
+            font-size: 30px;
+            color: #4f4f4f;
+            font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+            margin-top: 70px;
+            margin-bottom: 5px;
+         }
+         p.name{
+            text-align: left;
+            a{
+                color: $base-color;
+                font-size: 14px;
+                font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+                text-decoration: underline;
+            }
+         }
+         p.description{
+            text-align: left;
+            color: #4f4f4f;
+            font-size: 12px;
+            line-height: 24px;
+            font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+            margin-top: 40px;
+         }
+         
+    }
+  }
+  .team{
+     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    .development, .web-design, .complex-websites{
+        @include column(8);
+        margin-top: 50px;
+        h2{
+            color: $base-color;
+            font-size: 24px;
+        }
+        p{
+            margin-top: 20px;
+            line-height: 20px;
+            font-size: 14px;
+        }
+    }
+    .complex-websites{
+        @include column(8, true);
+    }
+    .code-quality{
+        @include column(15);
+        margin-top: 50px;
+        h2{
+            color: $base-color;
+            font-size: 24px;
+        }
+        p{
+            margin-top: 20px;
+            line-height: 20px;
+            font-size: 14px;
+        }
     }
   }
 }
