@@ -201,6 +201,7 @@ body{
   }
   .work{
     margin-top: 20px;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     .work-item, .work-item-last{
         @include column(8);
         margin-top: 30px;
@@ -226,6 +227,7 @@ body{
             background: url('../images/next.png');
             &:hover{
 		background: url('../images/next_h.png');
+                background-color: $base-color;
 	    }
         }
         p.desc{
@@ -369,10 +371,128 @@ body{
         margin-top: 50px;
         h2{
             color: $base-color;
-            font-size: 24px;
+            font-size: 30px;
+            padding-left: 10px;
+            font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+            span{
+                background: url("../images/ico-1.png") no-repeat;
+                display: inline-block;
+                width: 75px;
+                height: 65px;
+                background-color: $base-color;
+            }
+        }
+        p{
+            margin-top: 15px;
+            line-height: 20px;
+            font-size: 14px;
+        }
+    }
+    .web-design{
+        h2{
+            span{
+                background: url("../images/ico-2.png") no-repeat;
+                width: 45px;
+                background-color: $base-color;
+            }
+        }
+    }
+    .complex-websites{
+        @include column(8, true);
+        h2{
+            span{
+                background: url("../images/ico-3.png") no-repeat;
+                background-color: $base-color;
+            }
+        }
+    }
+    .code-quality, .business-driven-development, .agile-development, .user-stories, .pair-programming, .open-source{
+        @include column(15);
+        margin-top: 50px;
+        h2{
+            color: $base-color;
+            font-size: 30px;
+            font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
         }
         p{
             margin-top: 20px;
+            line-height: 20px;
+            font-size: 14px;
+        }
+    }
+    .code-quality-img, .business-driven-development-img, .agile-development-img, .open-source-img{
+        @include column(9, true);
+        margin-top: 99px;
+        img{
+            width: 350px;
+            height: 160px;
+        }
+    }
+    .business-driven-development-img{
+        img{
+            width: 350px;
+            height: 235px;
+        }
+    }
+    .agile-development-img{
+        img{
+            width: 350px;
+            height: 210px;
+        }
+    }
+    .user-stories{
+        @include column(12);
+    }
+    .pair-programming{
+        @include column(12, true);
+    }
+    .our-team, .clients{
+        @include column(24);
+        margin-top: 50px;
+        h2{
+            color: $base-color;
+            font-size: 30px;
+            font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+        }
+        .boximage{
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 30px;
+            img{
+                width: 85px;
+                height: 100px;
+            }
+            p.name{
+                color: #4f4f4f;
+                margin-top: 10px;
+            }
+            p.developer{
+                color: #979797;
+                font-size: 12px;
+                margin-top: 5px;
+            }
+        }
+    }
+    .clients{
+        img{
+            height: 57px;
+            margin-right: 30px;
+            margin-top: 15px;
+        }
+    }
+  }
+  .home{
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    .development, .web-design, .complex-websites, .latest-work, .about-us{
+        @include column(8);
+        margin-top: 50px;
+        h2{
+            color: $base-color;
+            font-size: 30px;
+            font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+        }
+        p{
+            margin-top: 15px;
             line-height: 20px;
             font-size: 14px;
         }
@@ -380,17 +500,96 @@ body{
     .complex-websites{
         @include column(8, true);
     }
-    .code-quality{
-        @include column(15);
+    .about-us{
+        @include column(16);
+    }
+    .latest-work{
+        @include column(24, true);
+        .work-item, .work-item-last{
+            @include column(8);
+            margin-top: 15px;
+            border-bottom: 1px solid $base-color;
+            padding-bottom: 15px;
+            a{
+                img{
+                    width: 310px;
+                    height: 200px;
+                }
+            }
+            .name{
+            font-size: 18px;
+            text-decoration: none;
+            color: #363636;
+            display: inline-block;
+            margin-top: 5px;
+            }
+            .next{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            float: right;
+            margin-top: 7px;
+            background: url('../images/next.png');
+            &:hover{
+		background: url('../images/next_h.png');
+                background-color: $base-color;
+	    }
+            }
+        }
+        .work-item-last{
+            @include column(8, true);
+        } 
+    }
+    .latest-blog{
+        @include column(8, true);
         margin-top: 50px;
         h2{
             color: $base-color;
-            font-size: 24px;
+            font-size: 30px;
+            font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+            margin-bottom: 18px;
         }
         p{
-            margin-top: 20px;
-            line-height: 20px;
-            font-size: 14px;
+            color: #979797;
+        }
+        h4{
+            color: $base-color;
+            margin-top: 15px;
+            margin-bottom: 3px;
+        }
+    }
+    .our-team, .clients{
+        @include column(24);
+        margin-top: 50px;
+        h2{
+            color: $base-color;
+            font-size: 30px;
+            font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+        }
+        .boximage{
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 30px;
+            img{
+                width: 85px;
+                height: 100px;
+            }
+            p.name{
+                color: #4f4f4f;
+                margin-top: 10px;
+            }
+            p.developer{
+                color: #979797;
+                font-size: 12px;
+                margin-top: 5px;
+            }
+        }
+    }
+    .clients{
+        img{
+            height: 57px;
+            margin-right: 30px;
+            margin-top: 15px;
         }
     }
   }
