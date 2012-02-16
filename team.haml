@@ -1,10 +1,11 @@
-!!! 5
+!!!
 %html
   %head
-    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %meta{charset: "utf-8"}
     %title Webmil
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/screen.css', 'media' => 'screen, projection'}
     %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
+  %body  
     .header
       %header
         #menu
@@ -20,7 +21,7 @@
                 %a{:href => "contact.html"} Contact
           .logo
             %a{href: "index.html"}
-              %img{src: "images/logo.png"}
+              %img{src: "images/logo.png", alt: "webmil"}
     .container
       .content
         .team
@@ -168,4 +169,4 @@
           %a{href: "#"} Map & directions
         .social
           %a{:href => "#"}
-            %img{:src  => "images/face.png"}
+            %img{:src  => "images/face.png", alt: "face"}
