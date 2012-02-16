@@ -1,10 +1,65 @@
-// Here is where you can define your constants for your application and to configure the blueprint framework.
-// Feel free to delete these if you want keep the defaults:
+@include sticky-footer(255px, ".container", ".footer-push", "footer");
 
-$blueprint-grid-columns: 24;
-$blueprint-grid-width: 30px;
-$blueprint-grid-margin: 10px;
+$icons: sprite-map("sprites/*.png");
+$base-color: #2daebf;
 
-// If you change your grid column dimensions
-// you can make a new grid background image from the command line like this:
-// compass grid-img 30+10x16
+body{
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size:14px;
+    letter-spacing:normal;
+}
+h2{
+    color: $base-color;
+    font-size: 30px;
+    font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+}
+.container{
+    background-image: url('../images/background.png');
+    position: relative;
+    min-width: 950px;
+    width: auto !important;
+}
+
+.header{
+    background: url('../images/menu_back.png') repeat-x;
+    background-position: bottom;
+    height: 115px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    header{
+        background: url('../images/background.png');
+        height: 103px;
+    	width: 100%;
+        #menu{
+            @include container;
+            ul.menu{
+                @include column(8, true);
+                @include prepend(14);
+                margin-top: 80px;
+                li{
+                    @include inline-block;
+                    margin: 0 15px;
+                    a{
+                        color: #4c4d4f;
+                        text-decoration: none;
+                        font-size: 17px;
+                        &:hover{
+                            color: $base-color;
+                        }
+                    }
+                }
+            }
+            .logo{
+                @include column(2, true);
+                margin-top: 22px;
+                a img{
+                    width: 75px;
+                    height: 73px;
+                }
+            }
+        }
+    }
+}
