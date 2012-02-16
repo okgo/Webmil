@@ -1,0 +1,34 @@
+.work-open-v{
+    .ipad{
+        @include column (17);
+        background:  url("../images/image2.png") no-repeat;
+        background-position: 78px 86px;
+        margin-top: 45px;
+        i.frame{
+            background: url("../images/ipad1.png") no-repeat;
+            display: block;
+            height: 860px;
+            width: 673px;
+        }
+    }
+    .desc{
+        @include column(6, true);
+        @include prepend(1);
+        margin-top: 44px;
+        p{
+            text-align: right;
+        }
+        h3{
+            margin-top: 70px;
+            margin-bottom: 5px;
+        }
+        p.name{
+            text-align: left;
+        }
+        p.description{
+            text-align: left;
+            margin-top: 40px;
+        }
+
+    }
+}

@@ -3,6 +3,9 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
     %title Webmil
+    /[if lt IE 9]
+      %script{src: '//html5shiv.googlecode.com/svn/trunk/html5.js'}
+      
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/screen.css', 'media' => 'screen, projection'}
     %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
     .header
@@ -23,7 +26,7 @@
               %img{src: "images/logo.png"}
     .container
       .content
-        %section.home
+        .home
           %section.development
             %h2 Development
             %p It is easy to dive in and start building an idea. The hard part is converting it into design strategy that people understand and convert into a product.
@@ -44,22 +47,28 @@
                   %a{href: "work_open_h.html"}
                     %img{src: "images/work1.png", alt: "Work"}
                   %figcaption
-                    %a.name{href: "work_open_h.html"} Західні Енергетичні Транзити
-                %a.next{href: "work_open_h.html"}
+                    %a{href: "work_open_h.html"}
+                      %h5
+                        Західні Енергетичні Транзити
+                        %span.next
               %li.work-item
                 %figure
                   %a{href: "work_open_h.html"}
-                    %img{src: "images/work2.png", alt: "Work"}
+                    %img{src: "images/work1.png", alt: "Work"}
                   %figcaption
-                    %a.name{href: "work_open_h.html"} Expono
-                  %a.next{href: "work_open_h.html"}
+                    %a{href: "work_open_h.html"}
+                      %h5
+                        Західні Енергетичні Транзити
+                        %span.next
               %li.work-item-last
                 %figure
                   %a{href: "work_open_h.html"}
                     %img{src: "images/work3.png", alt: "Work"}
                   %figcaption
-                    %a.name{href: "work_open_h.html"} Західні Енергетичні Транзити
-                  %a.next{href: "work_open_h.html"}
+                    %a{href: "work_open_h.html"}
+                      %h5
+                        Західні Енергетичні Транзити
+                        %span.next
           %article.about-us
             %h2 About Us
             %p We're not just a web design agency. We're not just a graphic design firm. We're not just coders, and we're not just artists. We're a team of T-shaped interaction designers and design strategists who help grow businesses. (Oh, and we're not just dudes with expensive chairs, either.)
@@ -69,25 +78,25 @@
           %section.latest-blog
             %h2 Latest Blog Posts
             %p We write about interaction design, design strategy, and more in our blog.
-            %h4 What We Learned from Open Source in 2011
+            %a{href: "#"} What We Learned from Open Source in 2011
             %p
               %time{datetime:"2011-12-22"}
                 December 23, 2011
               by Jonathan• 
               %meter 1 Comments
-            %h4 What We Learned from Open Source in 2011
+            %a{href: "#"} What We Learned from Open Source in 2011
             %p
               %time{datetime:"2011-12-22"}
                 December 23, 2011
               by Jonathan•
               %meter 1 Comments
-            %h4 What We Learned from Open Source in 2011
+            %a{href: "#"} What We Learned from Open Source in 2011
             %p
               %time{datetime:"2011-12-22"}
                 December 23, 2011
               by Jonathan•
               %meter 1 Comments
-            %h4 What We Learned from Open Source in 2011
+            %a{href: "#"} What We Learned from Open Source in 2011
             %p
               %time{datetime:"2011-12-22"}
                 December 23, 2011
@@ -95,7 +104,7 @@
               %meter 1 Comments
           %section.our-team
             %h2 Our Team
-            %ul.boximage
+            %ul.employees
               %li.vcard
                 %img.photo{src: "images/team.png", alt: "Team"}
                 %p.fn Surname Name
@@ -128,7 +137,7 @@
                 %img.photo{src: "images/team.png", alt: "Team"}
                 %p.fn Name
                 %p.title Developer
-          .clients
+          %section.clients
             %h2 Clients
             %img{src: "images/1.png", alt: "Clients"}
             %img{src: "images/2.png", alt: "Clients"}

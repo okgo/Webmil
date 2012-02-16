@@ -1,0 +1,21 @@
+.home{
+    .about-us{
+	@include column(16);
+	p{
+	    margin-top: 20px;
+	}
+    }
+    .latest-blog{
+        @include column(8, true);
+        h2{
+            margin-bottom: 18px;
+        }
+        p{
+            color: #979797;
+        }
+        a{
+	    display: block;
+            margin-top: 15px;
+        }
+    }
+}

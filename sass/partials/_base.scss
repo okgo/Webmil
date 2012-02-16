@@ -7,11 +7,39 @@ body{
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     font-size:14px;
     letter-spacing:normal;
+    line-height: 20px;
+    color: #404040;
 }
+// body heading
 h2{
     color: $base-color;
     font-size: 30px;
     font-family: 'PT Sans Narrow', Helvetica, Arial, sans-serif;
+}
+// portfolio heading
+h3{
+    color: #404040;
+    font-size: 30px;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+// footer heading
+h4{
+    color: #979797;
+    font-size: 14px;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+}
+// portfolio titel
+h5{
+    color: #404040;
+    font-size: 18px;
+}
+// link
+a{
+    color: $base-color;
+    text-decoration: underline;
+}
+section, article{
+    margin-top: 50px;
 }
 .container{
     background-image: url('../images/background.png');
@@ -19,7 +47,11 @@ h2{
     min-width: 950px;
     width: auto !important;
 }
-
+.content {
+    @include container;
+    margin-bottom: 20px;
+    padding-top: 115px;
+}
 .header{
     background: url('../images/menu_back.png') repeat-x;
     background-position: bottom;
@@ -28,7 +60,6 @@ h2{
     position: fixed;
     top: 0;
     z-index: 100;
-
     header{
         background: url('../images/background.png');
         height: 103px;
@@ -62,4 +93,165 @@ h2{
             }
         }
     }
+}
+footer{
+    background:#4f4f4f;
+    min-width: 950px;
+    width: auto !important;
+    .footer-container{
+        @include container;
+        color:#fff;
+        line-height:24px;
+        padding-top:40px;
+        ul{
+            margin-top:35px;
+            li{
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                    &:hover{
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+        .sitemap{
+            @include column(2);
+            @include prepend(2);
+        }
+        .resources{
+            @include column(2);
+        }
+        .tweet{
+            @include column(8);
+            @include prepend(1);
+            p{
+                background-color: #2daebf;
+                margin-top: 27px;
+                padding: 8px;
+                position:relative;
+                span{
+                    display:block;
+                    position:absolute;
+                    bottom:0;
+                    right:0;
+                    @include sprite-dimensions($icons, bracket);
+                    background: sprite($icons, bracket) no-repeat;
+                }
+            }
+            span{
+                float:right;
+            }
+        }
+        .address{
+            @include column(5);
+            @include prepend(1);
+            h4{
+                text-decoration: underline;
+            }
+            address{
+                margin-top:35px;
+            }
+        }
+        .social{
+            @include column(3, true);
+            a{
+                float: right;
+            }
+        }
+    }
+}
+
+// articles development, web design, complex websites
+.development, .web-design, .complex-websites{
+        @include column(8);
+        h2 span{
+            background: sprite($icons, ico-1) no-repeat;
+            @include inline-block;
+            @include sprite-dimensions($icons, ico-1);
+            background-color: $base-color;
+        }
+	p{
+	    margin-top: 20px;
+	}
+}
+.web-design{
+        h2 span{
+            background: sprite($icons, ico-2) no-repeat;
+            @include sprite-dimensions($icons, ico-2);
+            background-color: $base-color;
+        }
+}
+.complex-websites{
+        @include column(8, true);
+        h2 span{
+            background: sprite($icons, ico-3) no-repeat;
+            @include sprite-dimensions($icons, ico-3);
+            background-color: $base-color;
+        }
+}
+
+//team list, clients
+.our-team, .clients{
+        @include column(24);
+        .employees li{
+            @include inline-block;
+            margin-top: 15px;
+            margin-right: 29px;
+            img{
+                width: 85px;
+                height: 100px;
+            }
+            p.fn{
+                color: #4f4f4f;
+            }
+            p.title{
+                color: #979797;
+                font-size: 12px;
+            }
+        }
+    }
+    .clients{
+        img{
+            height: 57px;
+            margin-right: 30px;
+            margin-top: 15px;
+        }
+    }
+    // works list
+.work-item, .work-item-last{
+    @include column(8);
+    margin-top: 30px;
+    a{
+	img{
+	    width: 310px;
+	    height: 200px;
+	}
+    }
+    figcaption{
+	border-bottom: 1px solid $base-color;
+	padding-bottom: 10px;
+	a{
+	    text-decoration: none;
+	    &:hover .next{
+		background: url('../images/next_h.png');
+	        background-color: $base-color;
+	    }
+	}
+	.next{
+	@include inline-block;
+	width: 16px;
+	height: 16px;
+	float: right;
+	margin-top: 1px;
+	background: url('../images/next.png');
+	}
+    }
+    p.desc{
+	color: #979797;
+	margin-top: 10px;
+    }
+}
+.work-item-last{
+    @include column(8, true);
 }

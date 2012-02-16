@@ -1,0 +1,109 @@
+.left-address{
+    @include column(5);
+    .address{
+        h2{
+            margin-top: 50px;
+        }
+        address{
+            margin-top: 20px;
+            .skype{
+                p{
+                    span{
+                        color: $base-color;
+                    }
+                }
+            }
+            .mail{
+                p{
+                  span{
+                    color: $base-color;
+                    text-decoration: underline;
+                  }
+                }
+            }
+        }
+    }
+}
+.right-address{
+    @include column(18, true);
+    @include prepend(1);
+    h2{
+        margin-top: 50px;
+    }
+    #map{
+        display: block;
+        margin-top: 20px;
+        height: 320px;
+        border: 10px solid #fff;
+        width: 690px;
+    }
+}
+.form-txt{
+    @include column(6);
+    margin-top: 40px;
+    p{
+        color: #979797;
+        margin-top: 20px;
+        width: 190px;
+    }
+}
+form{
+    @include column(18, true);
+    margin-top: 40px;
+    .form{
+        margin-top: 15px;
+        p{
+            margin-top: 10px;
+            margin-bottom: 3px;
+        }
+        input.error{
+            border: 1px solid #eb7272;
+            &:hover{
+                border: 1px solid #eb7272;
+            }
+        }
+        input{
+            width: 470px;
+            height: 30px;
+            color: #4c4d4f;
+            text-indent: 15px;
+            border-radius: 5px;
+            border: 1px solid #e1e1e1;
+            &:hover{
+                border: 1px solid $base-color;
+            }
+        }
+        textarea{
+            width: 470px;
+            height: 195px;
+            color: #4c4d4f;
+            text-indent: 15px;
+            border-radius: 5px;
+            border: 1px solid #e1e1e1;
+            padding-top: 10px;
+            &:hover{
+                border: 1px solid $base-color;
+            }
+        }
+        span{
+            margin-left: 15px;
+        }
+        input.send-button{
+            background: none;
+            border: none;
+            text-decoration: underline;
+            color: $base-color;
+            font-size: 18px;
+            width: 45px;
+            text-align: center;
+            margin-left: 430px;
+            padding: 0;
+            display: block;
+            text-indent: 0;
+            &:hover{
+                cursor: pointer;
+                border: none;
+            }
+        }
+    }
+}
