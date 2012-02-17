@@ -2,10 +2,18 @@
 %html
   %head
     %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"}
     %title Webmil
+    /[if lt IE 9]
+      %script{src: 'http://html5shiv.googlecode.com/svn/trunk/html5.js'}
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/screen.css', 'media' => 'screen, projection'}
+    %link{'rel' => 'stylesheet', 'href' => 'stylesheets/480.css', 'media' => 'screen and (max-width: 480px)'}
+    %link{'rel' => 'stylesheet', 'href' => 'stylesheets/480.css', 'media' => 'screen and (max-device-width: 480px)'}
+    %link{rel: 'stylesheet', href: 'stylesheets/print.css', media: 'print'}
     %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
-  %body  
+    %script{type: 'text/javascript', src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
+    %script{type: 'text/javascript', src: 'js/resize.js'}
+  %body 
     .header
       %header
         #menu
@@ -21,7 +29,7 @@
                 %a{:href => "contact.html"} Contact
           .logo
             %a{href: "index.html"}
-              %img{src: "images/logo.png", alt: "logo"}
+              %img{src: "images/logo.png", alt: "Webmil"}
     .container
       .content
         .work-open-h
@@ -41,7 +49,7 @@
       .footer-push
     %footer
       .footer-container
-        %nav.sitemap
+        .sitemap
           %h4 Sitemap
           %ul
             %li
@@ -52,7 +60,7 @@
               %a{:href => "#"} team
             %li
               %a{:href => "#"} contact
-        %nav.resources
+        .resources
           %h4 Resources
           %ul
             %li

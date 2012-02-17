@@ -1,0 +1,14 @@
+.team{
+    .code-quality, .business-driven-development, .agile-development, .open-source{
+        @include column(8, true);
+    }
+    .code-quality-txt, .business-driven-development-txt, .agile-development-txt, .open-source-txt{
+        @include column(8, true);
+    }
+    .code-quality-img, .business-driven-development-img, .agile-development-img, .open-source-img{
+        @include column(8, true);
+    }
+    .user-stories, .pair-programming{
+        @include column(8, true);
+    }
+}

@@ -27,6 +27,7 @@ h4{
 // portfolio titel
 h5{
     font-size: 18px;
+    color: #404040;
 }
 // link
 a{
@@ -36,10 +37,13 @@ a{
 section, article{
     margin-top: 50px;
 }
+nav select {
+      display: none;
+}
 .container{
-    background-image: url('../images/background.png');
+    background: url('../images/background.png');
     position: relative;
-    min-width: 950px;
+    min-width: $base-width;
     width: auto !important;
 }
 .content {
@@ -90,7 +94,7 @@ section, article{
 }
 footer{
     background:#4f4f4f;
-    min-width: 950px;
+    min-width: $base-width;
     width: auto !important;
     .footer-container{
         @include container;
@@ -120,7 +124,7 @@ footer{
             @include column(8);
             @include prepend(1);
             p{
-                background-color: #2daebf;
+                background: #2daebf;
                 margin-top: 27px;
                 padding: 8px;
                 position:relative;
@@ -163,6 +167,7 @@ footer{
         background: sprite($icons, ico-1) $base-color no-repeat;
         @include inline-block;
         @include sprite-dimensions($icons, ico-1);
+	vertical-align: inherit;
     }
 	p{
 	    margin-top: 20px;
@@ -208,6 +213,9 @@ footer{
     }
 }
     // works list
+.work{
+    @include column(24);
+}
 .work-item, .work-item-last{
     @include column(8);
     margin-top: 30px;

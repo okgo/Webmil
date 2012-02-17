@@ -1,0 +1,89 @@
+$base-color: #2daebf;
+
+.container{
+    min-width: $base-width;
+    width: auto !important;
+}
+.content {
+    @include container;
+    padding: 0;
+}
+.header{
+    position: static;
+    margin: 0;
+    min-width: $base-width;
+    width: auto !important;
+    background: none;
+    height: 130px;
+    header{
+	height: 130px;
+	position: relative;
+        #menu{
+            @include container;
+	    .logo{
+                @include column(4, true);
+		@include prepend(3);
+            }
+	    nav ul{
+		display: none !important;
+	    }
+	    nav select {
+		@include column(4);
+		display: block;
+		float: right;
+		position: absolute;
+		left: 25%;
+		bottom: 0;
+	    }
+        }
+    }
+}
+footer{
+    min-width: $base-width;
+    .footer-container{
+        @include container;
+        .sitemap{
+            display: none;
+        }
+        .resources{
+            @include column(2, true);
+        }
+        .tweet{
+            display: none;
+        }
+        .address{
+            @include column(5, true);
+        }
+        .social{
+	    display: none;
+        }
+    }
+}
+
+// articles development, web design, complex websites
+.development, .web-design, .complex-websites{
+    @include column(8, true);
+}
+
+
+//team list, clients
+.our-team, .clients{
+    @include column(8, true);
+    .employees li{
+        margin: 15px 20px 0 0;
+    }
+}
+    // works list
+.work{
+    @include column(8);
+}
+.work-item, .work-item-last{
+    @include column(8, true);
+    margin-top: 30px;
+    text-align: center;
+    figcaption{
+	.next{
+	    display: none;
+	}
+    }
+}

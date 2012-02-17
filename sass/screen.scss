@@ -13,7 +13,7 @@
 @import "compass/utilities/sprites/base";
 @import "compass/layout/sticky-footer";
 @import "compass/css3";
-
+$base-width: 950px;
 //import base rules
 @import "partials/base";
 
@@ -34,6 +34,5 @@
 
 //import contact page rules
 @import "partials/contacts";
-
 
 

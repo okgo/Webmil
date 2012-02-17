@@ -1,0 +1,12 @@
+.left-address{
+    @include column(5, true);
+}
+.right-address{
+    @include column(8, true);
+}
+.form-txt{
+    @include column(6, true);
+}
+form{
+    @include column(8, true);
+}

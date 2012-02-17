@@ -1,0 +1,12 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint-liquid-grid-columns: 8;
+$blueprint-liquid-grid-width: 10%;
+$blueprint-liquid-grid-margin: 2.5%;
+$blueprint-liquid-container-width: 90%;
+$blueprint-liquid-container-min-width: 310px;
+
+// If you change your grid column dimensions
+// you can make a new grid background image from the command line like this:
+// compass grid-img 30+10x16

@@ -1,0 +1,8 @@
+.home{
+    .about-us{
+	@include column(8, true);
+    }
+    .latest-blog{
+        @include column(8, true);
+    }
+}
