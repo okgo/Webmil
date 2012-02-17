@@ -1,12 +1,12 @@
 .team{
+    p{
+        margin-top: 20px;
+    }
     .code-quality, .business-driven-development, .agile-development, .open-source{
         @include column(24);
     }
     .code-quality-txt, .business-driven-development-txt, .agile-development-txt, .open-source-txt{
         @include column(15);
-        p{
-            margin-top: 20px;
-        }
     }
     .code-quality-img, .business-driven-development-img, .agile-development-img, .open-source-img{
         @include column(9, true);
@@ -30,14 +30,8 @@
     }
     .user-stories{
         @include column(12);
-        p{
-            margin-top: 20px;
-        }
     }
     .pair-programming{
         @include column(12, true);
-        p{
-            margin-top: 20px;
-        }
     }
 }

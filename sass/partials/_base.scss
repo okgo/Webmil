@@ -18,19 +18,14 @@ h2{
 }
 // portfolio heading
 h3{
-    color: #404040;
     font-size: 30px;
-    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 }
 // footer heading
 h4{
     color: #979797;
-    font-size: 14px;
-    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
 }
 // portfolio titel
 h5{
-    color: #404040;
     font-size: 18px;
 }
 // link
@@ -53,8 +48,7 @@ section, article{
     padding-top: 115px;
 }
 .header{
-    background: url('../images/menu_back.png') repeat-x;
-    background-position: bottom;
+    background: url('../images/menu_back.png') repeat-x bottom;
     height: 115px;
     width: 100%;
     position: fixed;
@@ -164,60 +158,55 @@ footer{
 
 // articles development, web design, complex websites
 .development, .web-design, .complex-websites{
-        @include column(8);
-        h2 span{
-            background: sprite($icons, ico-1) no-repeat;
-            @include inline-block;
-            @include sprite-dimensions($icons, ico-1);
-            background-color: $base-color;
-        }
+    @include column(8);
+    h2 span{
+        background: sprite($icons, ico-1) $base-color no-repeat;
+        @include inline-block;
+        @include sprite-dimensions($icons, ico-1);
+    }
 	p{
 	    margin-top: 20px;
 	}
 }
 .web-design{
-        h2 span{
-            background: sprite($icons, ico-2) no-repeat;
-            @include sprite-dimensions($icons, ico-2);
-            background-color: $base-color;
+    h2 span{
+        background: sprite($icons, ico-2) $base-color no-repeat;
+        @include sprite-dimensions($icons, ico-2);
         }
 }
 .complex-websites{
-        @include column(8, true);
-        h2 span{
-            background: sprite($icons, ico-3) no-repeat;
-            @include sprite-dimensions($icons, ico-3);
-            background-color: $base-color;
-        }
+    @include column(8, true);
+    h2 span{
+        background: sprite($icons, ico-3) $base-color no-repeat;
+        @include sprite-dimensions($icons, ico-3);
+    }
 }
 
 //team list, clients
 .our-team, .clients{
-        @include column(24);
-        .employees li{
-            @include inline-block;
-            margin-top: 15px;
-            margin-right: 29px;
-            img{
-                width: 85px;
-                height: 100px;
-            }
-            p.fn{
-                color: #4f4f4f;
-            }
-            p.title{
-                color: #979797;
-                font-size: 12px;
-            }
-        }
-    }
-    .clients{
+    @include column(24);
+    .employees li{
+        @include inline-block;
+        margin: 15px 29px 0 0;
         img{
-            height: 57px;
-            margin-right: 30px;
-            margin-top: 15px;
+            width: 85px;
+            height: 100px;
+        }
+        p.fn{
+            color: #4f4f4f;
+        }
+        p.title{
+            color: #979797;
+            font-size: 12px;
         }
     }
+}
+.clients{
+    img{
+        height: 57px;
+        margin:15px 30px 0 0;
+    }
+}
     // works list
 .work-item, .work-item-last{
     @include column(8);
@@ -229,27 +218,26 @@ footer{
 	}
     }
     figcaption{
-	border-bottom: 1px solid $base-color;
-	padding-bottom: 10px;
-	a{
-	    text-decoration: none;
-	    &:hover .next{
-		background: url('../images/next_h.png');
-	        background-color: $base-color;
+	    border-bottom: 1px solid $base-color;
+	    padding-bottom: 10px;
+	    a{
+	        text-decoration: none;
+	        &:hover .next{
+		        background: url('../images/next_h.png') $base-color;
+	        }
 	    }
-	}
-	.next{
-	@include inline-block;
-	width: 16px;
-	height: 16px;
-	float: right;
-	margin-top: 1px;
-	background: url('../images/next.png');
-	}
+	    .next{
+	        @include inline-block;
+	        width: 16px;
+	        height: 16px;
+	        float: right;
+	        margin-top: 1px;
+	        background: url('../images/next.png');
+	    }
     }
     p.desc{
-	color: #979797;
-	margin-top: 10px;
+	    color: #979797;
+	    margin-top: 10px;
     }
 }
 .work-item-last{

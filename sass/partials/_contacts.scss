@@ -52,9 +52,9 @@ form{
     margin-top: 40px;
     .form{
         margin-top: 15px;
-        p{
-            margin-top: 10px;
-            margin-bottom: 3px;
+        label{
+            display: block;
+            margin: 10px 0 3px 0;
         }
         input.error{
             border: 1px solid #eb7272;
@@ -62,28 +62,21 @@ form{
                 border: 1px solid #eb7272;
             }
         }
-        input{
+        input, textarea{
             width: 470px;
             height: 30px;
             color: #4c4d4f;
             text-indent: 15px;
-            border-radius: 5px;
+            @include border-radius(5px);
             border: 1px solid #e1e1e1;
             &:hover{
                 border: 1px solid $base-color;
             }
         }
         textarea{
-            width: 470px;
             height: 195px;
-            color: #4c4d4f;
             text-indent: 15px;
-            border-radius: 5px;
-            border: 1px solid #e1e1e1;
             padding-top: 10px;
-            &:hover{
-                border: 1px solid $base-color;
-            }
         }
         span{
             margin-left: 15px;
