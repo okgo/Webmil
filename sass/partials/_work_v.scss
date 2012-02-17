@@ -1,8 +1,7 @@
 .work-open-v{
     .ipad{
         @include column (17);
-        background:  url("../images/image2.png") no-repeat;
-        background-position: 78px 86px;
+        background:  url("../images/image2.png") no-repeat 78px 86px;
         margin-top: 45px;
         i.frame{
             background: url("../images/ipad1.png") no-repeat;
@@ -19,8 +18,7 @@
             text-align: right;
         }
         h3{
-            margin-top: 70px;
-            margin-bottom: 5px;
+            margin: 70px 0 5px 0;
         }
         p.name{
             text-align: left;

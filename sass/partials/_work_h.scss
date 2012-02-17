@@ -1,7 +1,6 @@
 .work-open-h{
     h3{
-        margin-top: 30px;
-        margin-bottom: 5px;
+        margin: 30px 0 5px 0;
         a{
             float: right;
             margin-top: 5px;
@@ -24,8 +23,8 @@
             display: block;
             height: 672px;
             width: 862px;
-            border-radius: 50px;
-            box-shadow: 0px 10px 10px #b0b0b0;
+            @include border-radius(50px);
+            @include box-shadow(0px 10px 10px #b0b0b0);
         }
     }
     .booklet{
@@ -40,8 +39,7 @@
         @include column (12);
         @include prepend(6);
         margin-top: 20px;
-        background:  url("../images/image1.png") no-repeat;
-        background-position: 325px 30px;
+        background:  url("../images/image1.png") no-repeat 325px 30px;
         i.frame{
             background: url("../images/frame.png") no-repeat;
             display: block;

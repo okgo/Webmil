@@ -58,15 +58,15 @@
           %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         %form
           .form
-            %p Name
-            %input.error{:type=> "text"}
+            %label{for:'name'} Name
+            %input#name.error{:type=> "text"}
             %span Please enter your Name
-            %p Subject
-            %input{:type=> "text"}
-            %p E-mail
-            %input{:type=> "text"}
-            %p Message
-            %textarea
+            %label{for:'subject'} Subject
+            %input#subject{:type=> "text"}
+            %label{for:'email'} E-mail
+            %input#email{:type=> "text"}
+            %label{for:'message'} Message
+            %textarea#message
             %input.send-button{type: "submit", value: "Send"}
       .footer-push
     %footer
@@ -110,7 +110,7 @@
           %a{href: "#"} Map & directions
         .social
           %a{:href => "#"}
-            %img{:src  => "images/face.png"}
+            %img{:src  => "images/face.png", alt: "face"}
     %script{'type'=> 'text/javascript'}
       :plain
             //google map
