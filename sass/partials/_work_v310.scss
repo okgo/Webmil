@@ -1,0 +1,15 @@
+.work-open-v{
+    .ipad{
+        @include column (8, true);
+    }
+    .desc{
+        @include column(8, true);
+        @include prepend(0);
+        p{
+            text-align: left;
+        }
+        h3{
+            margin: 20px 0 5px 0;
+        }
+    }
+}

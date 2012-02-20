@@ -34,7 +34,7 @@ a{
     color: $base-color;
     text-decoration: underline;
 }
-section, article{
+section{
     margin-top: 50px;
 }
 nav select {
@@ -48,7 +48,7 @@ nav select {
 }
 .content {
     @include container;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding-top: 115px;
 }
 .header{
@@ -199,10 +199,12 @@ footer{
         }
         p.fn{
             color: #4f4f4f;
+	    margin-top: 0;
         }
         p.title{
             color: #979797;
             font-size: 12px;
+	    margin-top: 0;
         }
     }
 }
@@ -231,7 +233,7 @@ footer{
 	    a{
 	        text-decoration: none;
 	        &:hover .next{
-		        background: url('../images/next_h.png') $base-color;
+		    background: url('../images/next_h.png') $base-color;
 	        }
 	    }
 	    .next{

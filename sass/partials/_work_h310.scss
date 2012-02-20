@@ -1,0 +1,31 @@
+.work-open-h{
+    h3{
+        margin: 20px 0 5px 0;
+        line-height: normal;
+        a{
+            float: none;
+            margin-top: 0;
+            font-size: 14px;
+        }
+    }
+    p.desc{
+        @include column (8, true);
+        @include prepend(0);
+    }
+    .ipad{
+        @include column (8, true);
+        @include prepend(0);
+        
+    }
+    .booklet{
+        @include column (8, true);
+        img{
+            width: 310px;
+            height: 200px;
+        }
+    }
+    .city-light{
+        @include column (8, true);
+        @include prepend(0);
+    }
+}

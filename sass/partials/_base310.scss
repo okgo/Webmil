@@ -1,5 +1,9 @@
 $base-color: #2daebf;
 
+h2, h5{
+    line-height: normal;
+}
+
 .container{
     min-width: $base-width;
     width: auto !important;
@@ -7,6 +11,7 @@ $base-color: #2daebf;
 .content {
     @include container;
     padding: 0;
+    margin-bottom: 50px;
 }
 .header{
     position: static;
@@ -70,20 +75,16 @@ footer{
 .our-team, .clients{
     @include column(8, true);
     .employees li{
-        margin: 15px 20px 0 0;
+        margin: 15px 10px 0 0;
     }
 }
-    // works list
+// works list
 .work{
     @include column(8);
 }
 .work-item, .work-item-last{
     @include column(8, true);
     margin-top: 30px;
-    text-align: center;
     figcaption{
-	.next{
-	    display: none;
-	}
     }
 }

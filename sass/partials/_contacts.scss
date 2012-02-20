@@ -4,7 +4,7 @@
         h2{
             margin-top: 50px;
         }
-        address{
+        .locality, .tel, .skype{
             margin-top: 20px;
             .skype{
                 p{
@@ -44,7 +44,6 @@
     p{
         color: #979797;
         margin-top: 20px;
-        width: 190px;
     }
 }
 form{

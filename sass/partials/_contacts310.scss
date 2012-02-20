@@ -1,0 +1,34 @@
+.left-address{
+    @include column(8, true);
+}
+.right-address{
+    @include column(8, true);
+    @include prepend(0);
+    #map{
+        width: 290px;
+        height: 200px;
+        border: 5px solid #fff;
+    }
+}
+.form-txt{
+    @include column(8, true);
+}
+form{
+    @include column(8, true);
+    .form{
+        input{
+            width: 290px;
+            height: 20px;
+        }
+        textarea{
+            width: 290px;
+            height: 100px;
+        }
+        span{
+            display: none;
+        }
+        input.send-button{
+            margin-left: 245px;
+        }
+    }
+}

@@ -7,11 +7,12 @@
     /[if lt IE 9]
       %script{src: 'http://html5shiv.googlecode.com/svn/trunk/html5.js'}
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/screen.css', 'media' => 'screen, projection'}
-    %link{'rel' => 'stylesheet', 'href' => 'stylesheets/480.css', 'media' => 'screen and (max-width: 480px)'}
-    %link{'rel' => 'stylesheet', 'href' => 'stylesheets/480.css', 'media' => 'screen and (max-device-width: 480px)'}
+    %link{'rel' => 'stylesheet', 'href' => 'stylesheets/310.css', 'media' => 'screen and (max-width: 350px)'}
+    %link{'rel' => 'stylesheet', 'href' => 'stylesheets/310.css', 'media' => 'screen and (max-device-width: 350px)'}
     %link{rel: 'stylesheet', href: 'stylesheets/print.css', media: 'print'}
     %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
     %script{type: 'text/javascript', src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
+    %script{type: 'text/javascript', src: 'http://maps.googleapis.com/maps/api/js?sensor=false'}
     %script{type: 'text/javascript', src: 'js/resize.js'}
   %body
     .header
@@ -34,30 +35,28 @@
       .content
         .left-address
           .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
-            %h2 Adress:
             %meta{itemprop: "name", content: "Webmil"}
-            %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
-              .locality{itemprop: "addressLocality"}
-                %p 76000 Україна
-                %p м.Івано-Франківськ                                  
-              .street{itemprop: "streetAddress"}
-                %p вул. Січових Стрільців, 30
-            %h2 Phone:
-            %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
-              .tel{itemprop: "telephone"}
-                %p +38 0342 735 448
-                %p +38 094 922 8448
-                %p +38 063 757 0020
-            %h2 On-line:
-            %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
-              .skype{itemprop: "skype"}
-                %p
-                  skype:
-                  %span butlerok
-              .mail{itemprop: "email"}
-                %p
-                  e-mail:
-                  %span info@webmil.com.ua
+              %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+                %h2 Adress:
+                .locality{itemprop: "addressLocality"}
+                  %p 76000 Україна
+                  %p м.Івано-Франківськ                                  
+                .street{itemprop: "streetAddress"}
+                  %p вул. Січових Стрільців, 30
+                %h2 Phone:
+                .tel
+                  %p{itemprop: "telephone"} +38 0342 735 448
+                  %p{itemprop: "telephone"} +38 094 922 8448
+                  %p{itemprop: "telephone"} +38 063 757 0020
+                %h2 On-line:
+                .skype
+                  %p
+                    skype:
+                    %span butlerok
+                .mail
+                  %p
+                    e-mail:
+                    %span{itemprop: "email"} info@webmil.com.ua
         .right-address
           %h2 How to get
           #map
