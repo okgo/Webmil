@@ -15,7 +15,16 @@
     .ipad{
         @include column (8, true);
         @include prepend(0);
-        
+        height: 200px;
+        i.frame{
+            display: none;
+        }
+        img{
+            top: 0px;
+            left: 5px;
+            height: 200px;
+            width: 310px;
+        }
     }
     .booklet{
         @include column (8, true);
@@ -27,5 +36,15 @@
     .city-light{
         @include column (8, true);
         @include prepend(0);
+        height: 450px;
+        i.frame{
+            display: none;
+        }
+        img{
+            top: 0px;
+            left: 5px;
+            height: 450px;
+            width: 280px;
+        }
     }
 }

@@ -1,13 +1,23 @@
 .work-open-v{
     .ipad{
         @include column (17);
-        background:  url("../images/image2.png") no-repeat 78px 86px;
         margin-top: 45px;
+        position: relative;
         i.frame{
             background: url("../images/ipad1.png") no-repeat;
             display: block;
             height: 860px;
             width: 673px;
+            position: relative;
+            z-index: 90;
+        }
+        img{
+            position: absolute;
+            top: 84px;
+            left: 75px;
+            width: 525px;
+            height: 695px;
+            z-index: 1;
         }
     }
     .desc{

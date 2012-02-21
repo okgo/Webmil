@@ -15,16 +15,25 @@
     .ipad{
         @include column (22);
         @include prepend(1);
-        background:  url("../images/image.png") no-repeat center center;
         margin-top: 45px;
-        height: 700px;
+        position: relative;
         i.frame{
             background: url("../images/ipad.png") no-repeat;
             display: block;
             height: 672px;
-            width: 862px;
+            width: 856px;
+            position: relative;
             @include border-radius(50px);
             @include box-shadow(0px 10px 10px #b0b0b0);
+            z-index: 90;
+        }
+        img{
+            position: absolute;
+            top: 75px;
+            left: 120px;
+            z-index: 1;
+            height: 525px;
+            width: 700px;
         }
     }
     .booklet{
@@ -39,13 +48,19 @@
         @include column (12);
         @include prepend(6);
         margin-top: 20px;
-        background:  url("../images/image1.png") no-repeat 325px 30px;
+        position: relative;
         i.frame{
             background: url("../images/frame.png") no-repeat;
             display: block;
             height: 701px;
             width: 531px;
         }
-
+        img{
+            position: absolute;
+            top: 29px;
+            left: 325px;
+            height: 575px;
+            width: 365px;
+        }
     }
 }
