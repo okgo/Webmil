@@ -45,11 +45,12 @@ nav select {
     position: relative;
     min-width: $base-width;
     width: auto !important;
+    overflow: hidden;
+    padding-top: 115px;
 }
 .content {
     @include container;
     margin-bottom: 50px;
-    padding-top: 115px;
 }
 .header{
     background: url('../images/menu_back.png') repeat-x bottom;
@@ -159,7 +160,29 @@ footer{
         }
     }
 }
-
+//carousel
+.carousel{
+    display: block;
+    width: 100%;
+    .carousel-list{
+	@include container;
+	overflow: visible;
+	ul{
+	    overflow: visible;
+	    width: 2950px;
+	    margin-left: -960px;
+	}
+        li.carousel-item{
+	    display: table-cell;
+	    width: 950px;
+	    height: 360px;
+	    img{
+		width: 950px;
+		height: 360px;
+	    }
+	}
+    }
+}
 // articles development, web design, complex websites
 .development, .web-design, .complex-websites{
     @include column(8);

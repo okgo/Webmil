@@ -80,21 +80,23 @@ form{
         span{
             margin-left: 15px;
         }
+        .send{
+            @include prepend(10);
+        }
         input.send-button{
-            background: none;
-            border: none;
-            text-decoration: underline;
-            color: $base-color;
-            font-size: 18px;
+            @include column(2, true);
+            text-indent: -3px;
+            height: 22px;
             width: 45px;
-            text-align: center;
-            margin-left: 430px;
+            font-size: 18px;
+            margin-left: 30px;
+            color: $base-color;
+            border: none;
+            border-bottom: 1px solid $base-color;
+            border-radius: 0;
             padding: 0;
-            display: block;
-            text-indent: 0;
             &:hover{
                 cursor: pointer;
-                border: none;
             }
         }
     }

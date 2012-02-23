@@ -7,6 +7,7 @@ h2, h5{
 .container{
     min-width: $base-width;
     width: auto !important;
+    margin-top: 0;
 }
 .content {
     @include container;
@@ -69,7 +70,11 @@ footer{
 .development, .web-design, .complex-websites{
     @include column(8, true);
 }
-
+// carousel
+.carousel
+{
+    display: none;
+}
 
 //team list, clients
 .our-team, .clients{

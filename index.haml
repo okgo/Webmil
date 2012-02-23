@@ -10,9 +10,11 @@
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/310.css', 'media' => 'screen and (max-width: 350px)'}
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/310.css', 'media' => 'screen and (max-device-width: 350px)'}
     %link{rel: 'stylesheet', href: 'stylesheets/print.css', media: 'print'}
+    %link{rel: 'stylesheet', href: 'stylesheets/movingboxes.css', media: 'screen, projection'}
     %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
     %script{type: 'text/javascript', src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
     %script{type: 'text/javascript', src: 'js/resize.js'}
+    %script{type: 'text/javascript', src: 'js/jquery.movingboxes.js'}
   %body
     .header
       %header
@@ -31,6 +33,17 @@
             %a{href: "index.html"}
               %img{src: "images/logo.png", alt: "Webmil"}
     .container
+      %ul#slider
+        %li
+          %img{src: "images/foto.png", alt: "#"}
+          %h6 Webmil team
+        %li
+          %img{src: "images/work1.png", alt: "#"}
+          %h6 Webmil
+        %li
+          %img{src: "images/work2.png", alt: "#"}
+          %h6 Webmil office
+      .content
       .content
         .home
           %section.development
@@ -46,7 +59,7 @@
             %p Gone are the days of static ‘brochure’ websites. Today we help businesses attract customers and make money online.
             %p This means creating a marketing site with functional components and messaging that drives people to take action.
           %section.work
-            %h2 Latest Work
+            %h2 Latest Works
             %ul
               %li.work-item
                 %figure
@@ -89,25 +102,25 @@
               %time{datetime:"2011-12-23"}
                 December 23, 2011
               by Jonathan• 
-              %meter{value: 1} 1 Comments
+              %span{value: 1} 1 Comments
             %a{href: "#"} What We Learned from Open Source in 2011
             %p
               %time{datetime:"2011-12-23"}
                 December 23, 2011
               by Jonathan•
-              %meter{value: 1} 1 Comments
+              %span{value: 1} 1 Comments
             %a{href: "#"} What We Learned from Open Source in 2011
             %p
               %time{datetime:"2011-12-23"}
                 December 23, 2011
               by Jonathan•
-              %meter{value: 1} 1 Comments
+              %span{value: 1} 1 Comments
             %a{href: "#"} What We Learned from Open Source in 2011
             %p
               %time{datetime:"2011-12-23"}
                 December 23, 2011
               by Jonathan•
-              %meter{value: 1} 1 Comments
+              %span{value: 1} 1 Comments
           %section.our-team
             %h2 Our Team
             %ul.employees
@@ -196,3 +209,14 @@
         .social
           %a{:href => "#"}
             %img{src: "images/face.png", alt: "face" }
+    %script{'type'=> 'text/javascript'}
+      :plain
+        $(document).ready(function() {
+          $('#slider').movingBoxes({
+            startPanel   : 1,      // start with this panel
+            wrap         : true,   // if true, the panel will "wrap" (it really rewinds/fast forwards) at the ends
+            buildNav     : true,   // if true, navigation links will be added
+            fixedHeight  : false,
+            reducedSize  : 1,       // non-current panel size: 80% of panel size
+          });
+        });
