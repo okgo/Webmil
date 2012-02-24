@@ -3,11 +3,16 @@ $base-color: #2daebf;
 h2, h5{
     line-height: normal;
 }
-
+h6{
+    padding: 5px;
+    width: 150px;
+    text-align: left;
+    font-size: 14px;
+}
 .container{
     min-width: $base-width;
     width: auto !important;
-    margin-top: 0;
+    padding-top: 18px;
 }
 .content {
     @include container;
@@ -66,14 +71,43 @@ footer{
     }
 }
 
+// Slider
+/* Default MovingBoxes wrapper size */
+#movingboxes {
+    min-height: 150px;
+    width: 300px;
+}
+
+/* Panel Wrapper */
+.mb-slider, .mb-scroll {
+    height: 150px;
+}
+.mb-inside img{
+    width: 666px;
+    height: 150px;
+}
+.slider-txt{
+    left: 10%;
+    top: 70%;
+    p{
+        display: none;
+    }
+}
+/* Slider panel */
+.mb-slider .mb-panel {
+    width: 310px;
+}
+/* Left & Right Navigation Arrows */
+a.mb-scrollButtons {
+    width: 28px;
+    height: 28px;
+    background: transparent url(../images/arrows_l.png) no-repeat;
+    margin-top: -14px;
+}
+
 // articles development, web design, complex websites
 .development, .web-design, .complex-websites{
     @include column(8, true);
-}
-// carousel
-.carousel
-{
-    display: none;
 }
 
 //team list, clients

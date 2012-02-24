@@ -10,7 +10,6 @@
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/310.css', 'media' => 'screen and (max-width: 350px)'}
     %link{'rel' => 'stylesheet', 'href' => 'stylesheets/310.css', 'media' => 'screen and (max-device-width: 350px)'}
     %link{rel: 'stylesheet', href: 'stylesheets/print.css', media: 'print'}
-    %link{rel: 'stylesheet', href: 'stylesheets/movingboxes.css', media: 'screen, projection'}
     %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
     %script{type: 'text/javascript', src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
     %script{type: 'text/javascript', src: 'js/resize.js'}
@@ -36,14 +35,19 @@
       %ul#slider
         %li
           %img{src: "images/foto.png", alt: "#"}
-          %h6 Webmil team
+          .slider-txt
+            %h6 Webmil team
+            %p Evident in plants, animals, the shape of galaxies, and even your DNA, this proportionality blueprint is so pervasive that humans have noticed it for thousands of years. We’ve used it, too — it can be seen in art and architecture 
         %li
-          %img{src: "images/work1.png", alt: "#"}
-          %h6 Webmil
+          %img{src: "images/foto.png", alt: "#"}
+          .slider-txt
+            %h6 Webmil office
+            %p 123123
         %li
-          %img{src: "images/work2.png", alt: "#"}
-          %h6 Webmil office
-      .content
+          %img{src: "images/foto.png", alt: "#"}
+          .slider-txt
+            %h6 Webmil
+            %p Evident in plants, animals, the shape of galaxies, and even your DNA, this proportionality blueprint is so pervasive that humans have noticed it for thousands of years. We’ve used it, too — it can be seen in art and architecture 
       .content
         .home
           %section.development
@@ -218,5 +222,11 @@
             buildNav     : true,   // if true, navigation links will be added
             fixedHeight  : false,
             reducedSize  : 1,       // non-current panel size: 80% of panel size
+            hashTags     : false,
+            speed : 500,
+            initialized  : function(){
+                $(".mb-wrapper").animate({opacity: 1})
+            }
           });
         });
+        
