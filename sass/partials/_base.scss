@@ -37,6 +37,9 @@ h6{
     text-align: right;
     width: 400px;
     background: rgba($base-color, 0.8);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC2DAEBF,endColorstr=#CC2DAEBF)"; /* IE8 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC2DAEBF,endColorstr=#CC2DAEBF);   /* IE6 & 7 */
+    zoom: 1;
 }
 // link
 a{
@@ -172,7 +175,7 @@ footer{
 // Slider
 /* Default MovingBoxes wrapper size */
 #movingboxes {
-    width: 100%;
+    width: 1600px;
     min-height: 360px;
 }
 
@@ -204,6 +207,7 @@ footer{
     float: left;
     list-style: none;
     position: relative;
+    width: 1600px;
 }
 /* Cursor */
 .mb-slider .mb-panel.current {
@@ -267,6 +271,9 @@ a.mb-scrollButtons.disabled {
 	color: #fff;
 	padding: 20px 10px;
 	height: 61px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000)"; /* IE8 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);   /* IE6 & 7 */
+	zoom: 1;
     }
 }
 
