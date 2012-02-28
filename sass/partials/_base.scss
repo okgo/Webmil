@@ -58,7 +58,7 @@ nav select {
     min-width: $base-width;
     width: auto !important;
     overflow: hidden;
-    padding-top: 115px;
+    padding-top: 104px;
 }
 .content {
     @include container;
@@ -96,7 +96,7 @@ nav select {
             }
             .logo{
                 @include column(2, true);
-                margin-top: 22px;
+                margin-top: 24px;
                 a img{
                     width: 75px;
                     height: 73px;
